@@ -1,54 +1,78 @@
-# 🎮 GameVault - Personal Game Tracker & Wiki Platform
+# 🎮 GameVault
 
-GameVault adalah platform cloud pribadi untuk mendokumentasikan perjalanan bermain game Anda lintas platform (PC, PlayStation, Nintendo Switch, Retro/Emulator, Xbox, dll.), mencatat ulasan, mengelola wishlist, serta menyimpan panduan dan checklist quest (*Personal Wiki*).
+A modern, self-hosted personal game tracking platform built with Next.js. Track your gaming backlog, write personal reviews, manage wishlists, and document your game notes — all in one beautifully designed interface.
 
----
-
-## ✨ Fitur Utama
-
-- 🕹️ **Multi-Status Tracking:** Kategori game *Currently Playing*, *Completed*, *Wishlist*, *On Hold*, dan *Dropped*.
-- 🔍 **Auto-Metadata Game:** Terhubung dengan RAWG Video Games Database untuk mengambil cover poster resolusi tinggi, developer, genre, dan tahun rilis otomatis (dilengkapi fallback database siap pakai).
-- 📖 **Personal Game Wiki & Notes:** Ruang bebas untuk mencatat panduan *build*, strategi bos, lore, dan rahasia game.
-- 🎯 **Quest & Trophy Checklist:** Buat target misi pribadi dan checklist trophy interaktif untuk setiap game.
-- 📊 **Statistik Otomatis:** Menghitung total koleksi, jumlah tamat, estimasi jam bermain, dan rata-rata skor rating.
-- 💾 **Backup & Restore (.JSON):** Ekspor dan impor seluruh data arsip Anda kapan saja untuk keamanan data.
-- ☁️ **Siap Cloud ($0/Bulan):** Siap di-deploy ke Vercel dan diintegrasikan dengan Supabase (PostgreSQL).
+![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=nextdotjs) ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38bdf8?logo=tailwindcss) ![Vercel](https://img.shields.io/badge/Deploy-Vercel-black?logo=vercel)
 
 ---
 
-## 🚀 Cara Menjalankan Secara Lokal
+## ✨ Features
 
-1. Buka terminal di folder proyek ini:
-   ```bash
-   cd C:\Users\ASUS\.gemini\antigravity\scratch\game-vault
-   ```
-2. Jalankan server pengembang (*development server*):
-   ```bash
-   npm run dev
-   ```
-3. Buka browser dan akses **[http://localhost:3000](http://localhost:3000)**.
-
----
-
-## 🔑 Menghubungkan RAWG API Key (Gratis)
-
-1. Kunjungi [rawg.io/apidocs](https://rawg.io/apidocs) dan daftar akun gratis.
-2. Dapatkan API Key Anda (kuota gratis hingga 20.000 panggilan/bulan).
-3. Di GameVault, klik tombol **Pengaturan** di pojok kanan atas.
-4. Masukkan API Key Anda lalu klik **Simpan**.
+- 🕹️ **Multi-Platform Tracking** — Track games across PC, PlayStation, Nintendo Switch, Xbox, Mobile, and Retro/Emulator.
+- 🔍 **Auto Game Metadata** — Powered by the [RAWG Video Games Database API](https://rawg.io/apidocs) to auto-fill cover art, genres, developers, and release dates.
+- 📋 **Status Management** — Organize your library with *Currently Playing*, *Completed*, *Wishlist*, *On Hold*, and *Dropped* statuses.
+- 📖 **Personal Wiki & Notes** — Write Markdown notes for each game: build guides, boss strategies, hidden secrets, and lore summaries.
+- ✅ **Quest Checklist** — Create personal checklists for in-game missions, trophies, and achievements.
+- 📊 **Statistics Dashboard** — Automatic stats for total games, completed titles, total playtime, and average rating.
+- 💾 **JSON Backup & Restore** — Export and import your entire library as a portable JSON file.
+- ☁️ **Cloud-Ready** — Deployable to [Vercel](https://vercel.com/) for free with zero configuration.
 
 ---
 
-## 🌐 Panduan Deploy ke Cloud (Akses di Mana Saja)
+## 🛠️ Tech Stack
 
-1. Buat repositori baru di akun [GitHub](https://github.com/) Anda dan push folder proyek ini:
-   ```bash
-   git add .
-   git commit -m "feat: initial GameVault personal tracker"
-   git branch -M main
-   git remote add origin https://github.com/<username>/<repo-name>.git
-   git push -u origin main
-   ```
-2. Kunjungi [Vercel](https://vercel.com/) dan pilih **Add New Project**.
-3. Import repositori GitHub Anda.
-4. Klik **Deploy**. Website pribadi Anda langsung aktif dan dapat diakses dari browser HP atau komputer mana saja!
+| Layer | Technology |
+| :--- | :--- |
+| Framework | Next.js 16 (App Router, TypeScript) |
+| Styling | Tailwind CSS v4 + Lucide Icons |
+| Data Storage | Browser LocalStorage (portable JSON backup) |
+| Game Metadata | RAWG Video Games Database API |
+| Deployment | Vercel (free tier) |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/game-vault.git
+cd game-vault
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### RAWG API Key (Optional)
+
+GameVault works out of the box with a built-in offline database of popular titles. For full search access to 500,000+ games, get a free API key:
+
+1. Visit [rawg.io/apidocs](https://rawg.io/apidocs) and register for a free account.
+2. Copy your API key.
+3. In the app, open **Settings** and paste your key.
+
+---
+
+## 📦 Deployment
+
+Deploy instantly to Vercel:
+
+1. Push this repository to your GitHub account.
+2. Go to [vercel.com](https://vercel.com/) → **Add New Project** → Import your repo.
+3. Click **Deploy**. Done!
+
+---
+
+## 📄 License
+
+MIT License — free to use, modify, and distribute.
